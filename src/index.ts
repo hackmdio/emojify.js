@@ -42,8 +42,8 @@ const emoticons = {
 const ignoreModeAvailableKeys = [
   'named', 'thumbsup', 'thumbsdown'
 ]
-const emoticonsProcessed: [RegExp, string][] = Object.entries(emoticons).map(
-  ([key, value]) => [value, key],
+const emoticonsProcessed: [RegExp, string][] = Object.keys(emoticons).map(
+  key => [(emoticons as any)[key], key],
 );
 
 type modeToElementTag = {
@@ -419,10 +419,24 @@ class Emojify {
   }
 }
 
-export const emojify = new Emojify()
+const e = new Emojify()
 
-export const defaultConfig = emojify.defaultConfig
-export const emojiNames = namedEmoji
-export const setConfig = emojify.setConfig
-export const replace = emojify.emojifyString
-export const run = emojify.run
+const module = {
+  emojify: e,
+  defaultConfig: e.defaultConfig,
+  emojiNames: namedEmoji,
+  setConfig: e.setConfig,
+  replace: e.emojifyString,
+  run: e.run
+}
+
+export const emojify = module.emojify
+export const defaultConfig = module.defaultConfig
+export const emojiNames = module.emojiNames
+export const setConfig = module.setConfig
+export const replace = module.replace
+export const run = module.run
+
+if (typeof window !== 'undefined') {
+  (window as any).emojify = module
+}

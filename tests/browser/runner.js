@@ -4,7 +4,7 @@ var ROOT = JS.ENV.ROOT || '../..';
 // JS.cache = false;
 
 JS.load(
-    ROOT + '/dist/emojify-browser.js',
+    ROOT + '/dist/js/emojify-browser.min.js',
     ROOT + '/tests/spec/string.js',
     ROOT + '/tests/spec/dom.js',
     ROOT + '/tests/spec/tag_type.js',

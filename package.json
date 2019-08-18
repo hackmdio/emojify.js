@@ -5,6 +5,7 @@
   "main": "dist/js/index.min.js",
   "scripts": {
     "test": "node tests/node",
+    "test:browser": "phantomjs tests/phantom.js",
     "build": "gulp"
   },
   "types": "dist/index.d.ts",
@@ -53,6 +54,7 @@
     "jstest": "~1.0.4",
     "merge2": "^1.2.4",
     "minimatch": "~1.0.0",
+    "phantomjs": "^2.1.7",
     "q": "^1.0.1",
     "through2": "~0.6.3",
     "ts-node": "^8.3.0",
@@ -73,6 +75,7 @@
     ]
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5"
+    "@babel/runtime": "^7.5.5",
+    "core-js": "^3.2.1"
   }
 }
