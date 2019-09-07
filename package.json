@@ -8,6 +8,7 @@
     "test": "mocha --opts tests/node.opts",
     "test:watch": "mocha --opts tests/node.opts --watch",
     "test:browser": "karma start",
+    "lint": "standard",
     "build": "gulp"
   },
   "types": "dist/index.d.ts",
@@ -66,6 +67,7 @@
     "mocha": "^6.2.0",
     "phantomjs": "^2.1.7",
     "puppeteer": "^1.19.0",
+    "standard": "^14.1.0",
     "through2": "~0.6.3",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
