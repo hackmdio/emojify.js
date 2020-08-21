@@ -7,13 +7,7 @@ interface Window {
 
 const namedEmojiString = /*##EMOJILIST*/'';
 const namedEmoji = namedEmojiString.split(/,/);
-const namedMatchHash: { [key: string]: boolean } = namedEmoji.reduce(
-  (memo, v) => ({
-    ...memo,
-    [v]: true,
-  }),
-  {},
-);
+const namedMatchHash = new Set(namedEmoji);
 
 const emoticons = {
   /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
@@ -185,7 +179,7 @@ class Emojify {
     /* Special case for named emoji */
     if (match[1] && match[2]) {
       var named = match[2];
-      if (namedMatchHash[named]) {
+      if (namedMatchHash.has(named)) {
         return named;
       }
       return;
