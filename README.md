@@ -4,8 +4,6 @@ Note: This fork is a rewrite version from joypixels/emojify.js with TypeScript a
 
 Below is the original README
 
-TODO: update it
-
 ---
 
 A swiss-army-knife for all emoji, in Javascript. Used by [Gitter](https://gitter.im/) and [Mapbox](https://www.mapbox.com/blog/emoji-map-markers/).
@@ -28,7 +26,7 @@ The emoji keywords are as described by [emoji-cheat-sheet.com](http://www.emoji-
 
 ### Via npm
 
-`npm install @hackmd/emojify.js  --save`
+`npm install @hackmd/emojify.js --save`
 
 ## API
 
