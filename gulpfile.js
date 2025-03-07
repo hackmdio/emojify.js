@@ -152,7 +152,7 @@ function dataURI () {
     .pipe($.concat('emojify-emoticons.css'))
     .pipe($.replace('.emoji-+1', '.emoji-plus1'))
     .pipe(gulp.dest(paths.dist.styles.dataURI))
-    .pipe($.minifyCss())
+    .pipe($.cleanCSS())
     .pipe($.rename({
       suffix: '.min'
     }))
@@ -164,7 +164,7 @@ function dataURI () {
     .pipe($.concat('emojify.css'))
     .pipe($.replace('.emoji-+1', '.emoji-plus1'))
     .pipe(gulp.dest(paths.dist.styles.dataURI))
-    .pipe($.minifyCss())
+    .pipe($.cleanCSS())
     .pipe($.rename({
       suffix: '.min'
     }))
@@ -175,7 +175,7 @@ exports.dataURI = dataURI
 function copyStyles () {
   return gulp.src('./src/css/basic/*.css')
     .pipe(gulp.dest(paths.dist.styles.basic))
-    .pipe($.minifyCss())
+    .pipe($.cleanCSS())
     .pipe($.rename({
       suffix: '.min'
     }))
