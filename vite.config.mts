@@ -27,6 +27,11 @@ export default defineConfig({
         entryFileNames: "emojify-browser.min.js",
       },
     },
+    lib: {
+      entry: ["./src/index.ts"],
+      name: "emojify",
+      formats: ["umd"],
+    },
   },
   plugins: [
     // Clean the entire "dist" folder first.

@@ -20,6 +20,11 @@ export default defineConfig({
     },
     ssr: true,
     minify: "esbuild",
+    lib: {
+      entry: ["./src/index.ts"],
+      name: "emojify",
+      formats: ["umd"],
+    },
   },
   plugins: [
     // Replace the placeholder token with the actual comma–separated emoji list.
