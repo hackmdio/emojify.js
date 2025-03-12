@@ -5,7 +5,7 @@ interface Window {
   document: typeof document
 }
 
-const namedEmojiString = /*##EMOJILIST*/'';
+const namedEmojiString = '#EMOJILIST#';
 const namedEmoji = namedEmojiString.split(/,/);
 const namedMatchHash = new Set(namedEmoji);
 
@@ -221,7 +221,7 @@ class Emojify {
     });
   }
 
-  defaultReplacer(emoji: string, name: string): string {
+  defaultReplacer(_emoji: string, name: string): string {
     const elementType =
       this.config.tag_type || modeToElementTagType(this.config.mode!);
     if (elementType !== 'img') {
@@ -365,7 +365,6 @@ class Emojify {
 
           return win.NodeFilter.FILTER_SKIP;
         } as any,
-        false,
       );
 
       var node;

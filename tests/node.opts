@@ -1,2 +1,0 @@
---require tests/node.js
-tests/spec/*.test.js
