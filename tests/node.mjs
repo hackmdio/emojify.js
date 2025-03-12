@@ -1,8 +1,8 @@
-import jsdom from "jsdom-global";
-import { assert } from "chai";
-import emojify from "../dist/js/index.min.js";
+import jsdom from 'jsdom-global'
+import { assert } from 'chai'
+import emojify from '../dist/js/index.min.js'
 
-jsdom();
+jsdom()
 
-global.assert = assert;
+global.assert = assert
 global.emojify = emojify
