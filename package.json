@@ -28,6 +28,13 @@
   "bugs": {
     "url": "https://github.com/hackmdio/emojify.js/issues"
   },
+  "standard": {
+    "ignore": [
+      "dist/",
+      "tests/**/*.js",
+      "karma.conf.js"
+    ]
+  },
   "devDependencies": {
     "@open-wc/karma-esm": "^4.0.0",
     "@rollup/plugin-replace": "^6.0.2",
