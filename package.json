@@ -1,6 +1,6 @@
 {
   "name": "@hackmd/emojify.js",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "A Javascript module to convert emoji keywords to images.",
   "main": "dist/js/index.min.js",
   "browser": "dist/js/emojify-browser.min.js",
